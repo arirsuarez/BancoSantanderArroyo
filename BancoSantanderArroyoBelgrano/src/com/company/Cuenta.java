@@ -12,15 +12,15 @@ public class Cuenta {
         //System.out.println("CREASTE UNA NUEVA CUENTA");
     }
 
-    public void depositar(Double platita){
+    public void depositar(Double platita) {
         saldo = saldo + platita;
-        System.out.println("Se han depositado $"+platita+". Su saldo actual es de $"+saldo);
+        System.out.println("Se han depositado $" + platita + ". Su saldo actual es de $" + saldo);
     }
 
-    public void extraer(Double platita){
-        if(platita <= saldo){
+    public void extraer(Double platita) {
+        if (platita <= saldo) {
             saldo = saldo - platita;
-            System.out.println("Se han extraido $"+platita+". Su saldo actual es de $"+saldo);
+            System.out.println("Se han extraido $" + platita + ". Su saldo actual es de $" + saldo);
         } else {
             System.out.println("¡SALDO INSUFICIENTE!");
         }
@@ -28,5 +28,9 @@ public class Cuenta {
 
     public Double getSaldo() {
         return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
     }
 }

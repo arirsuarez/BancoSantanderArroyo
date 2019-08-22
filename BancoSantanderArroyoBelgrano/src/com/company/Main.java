@@ -7,7 +7,7 @@ public class Main {
 
         //Cliente otroCliente = new Cliente();
         Cliente unCliente = new Cliente("Pat","Ugarte",12344,3356432,"23-23234232-2");
-        Cuenta miCuenta = new Cuenta(unCliente);
+    /*    Cuenta miCuenta = new Cuenta(unCliente);
 
         System.out.println(miCuenta.getSaldo());
 
@@ -16,6 +16,11 @@ public class Main {
         System.out.println(miCuenta.getSaldo());
 
         miCuenta.extraer(2500.0);
-        miCuenta.extraer(1000.0);
+        miCuenta.extraer(1000.0);*/
+
+        Cheque unCheque = new Cheque(3000.0,"BBVA");
+        CuentaCorriente unaCuentaCorriente = new CuentaCorriente(unCliente);
+        unaCuentaCorriente.extraer(10000.0);
+        unaCuentaCorriente.depositarCheque(unCheque);
     }
 }
